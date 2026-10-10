@@ -57,6 +57,9 @@ npm run dev
 
 Open `http://localhost:3000` in your browser.
 
+Live Website Link : https://ph-assignment-7-six.vercel.app/
+GitHub Repository Link : https://github.com/metul001/PH_Assignment-7.git
+
 ## Routes
 
 - `/` - Home page
