@@ -5,7 +5,13 @@ import { getCategories, getProducts } from "@/lib/data";
 export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const [products, categories] = await Promise.all([getProducts(slug), getCategories()]);
-  const category = categories.find((item) => item.slug === slug);
+  const category = categories.find(
+    (item) =>
+      item.slug === slug ||
+      (slug === "shobji" && item.slug === "sobji") ||
+      (slug === "moshla" && item.slug === "mosla") ||
+      (slug === "dim" && item.slug === "dim-dui")
+  );
 
   if (!category || products.length === 0) {
     return (
